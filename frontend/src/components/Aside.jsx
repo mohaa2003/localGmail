@@ -17,7 +17,7 @@ const Aside = () => {
                 </button>
             </div>
             <div>
-                <div className=" flex justify-between items-center px-3 py-2 light-2 rounded-full">
+                <div className=" flex justify-between items-center px-3 py-2 light-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <MdInbox size={20}/>
                         <strong className="font-bold">Inbox</strong>
@@ -29,7 +29,7 @@ const Aside = () => {
                     </div>
 
                 </div>
-                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full">
+                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <VscSend size={20}/>
                         <strong className="">Sent</strong>
@@ -41,7 +41,7 @@ const Aside = () => {
                     </div>
 
                 </div>
-                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full">
+                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <RiSpam2Line size={20}/>
                         <strong className="">Draft</strong>
@@ -53,7 +53,7 @@ const Aside = () => {
                     </div>
 
                 </div>
-                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full">
+                <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <RiDraftLine size={20}/>
                         <strong className="">Spam</strong>
