@@ -5,7 +5,7 @@ import "./page.css";
 
 export default function Home() {
   return (
-      <main className="flex w-full">
+      <main className="flex w-full max-h-screen">
         <ToolBar/>
         <div className="rest">
           <Aside/>

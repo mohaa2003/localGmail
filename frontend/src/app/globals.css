@@ -18,12 +18,12 @@
 
 @layer utilities {
   .txtNorm {
-    color: #313f51;
+    color: #353f4d;
     font-weight: 300;
     @apply text-sm
   }
   .txtTitle {
-    color: #313f51;
+    color: #353f4d;
     font-weight: 500;
   }
 
@@ -47,3 +47,28 @@
   }
 }
 
+.border-light-1{
+  border-color: #eaf1fb;
+}
+.border-lighter-1{
+  border-color: #f6f8fc;
+}
+.border-light-2{
+  border-color: #c2e7ff;
+}
+.border-lighter-2{
+  border-color: rgba(194,231,255,200);
+}
+
+.accent-light-1{
+  accent-color: #eaf1fb;
+}
+.accent-lighter-1{
+  accent-color: #f6f8fc;
+}
+.accent-light-2{
+  accent-color: #c2e7ff;
+}
+.accent-lighter-2{
+  accent-color: rgba(194,231,255,200);
+}
