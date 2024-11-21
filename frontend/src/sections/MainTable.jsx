@@ -7,6 +7,8 @@ import { MdOutlineCheckBox } from "react-icons/md";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
 import { GoRead } from "react-icons/go";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 
 
@@ -26,22 +28,34 @@ const holdChecking = ()=>{
   return (
     <table id="maintable" className="bg-[#fff] h-full flex flex-col relative overflow-auto rounded-3xl">
       <thead className="sticky top-0">
-      <tr className="flex gap-2 border border-light-1 bg-white rounded-t-3xl">
-            <td className="w-[20%] flex items-center">
-              <span className="p-3 hover:light-2 rounded-full accent-light-2" onClick={holdChecking}>{checked?<MdOutlineCheckBox size={20}/>:<MdOutlineCheckBoxOutlineBlank size={20}/>}</span>
-              <span className="p-1 hover:light-2 rounded-full"><FaCaretDown size={14}/></span>
+      <tr className="flex justify-between border border-white bg-white rounded-t-3xl items-center">
+            <td className="flex gap-16">
+              <div className="w-[5%] flex items-center p-1">
+                <span className="px-1 py-2 hover:light-2 rounded-xl accent-light-2" onClick={holdChecking}>{checked?<MdOutlineCheckBox size={20}/>:<MdOutlineCheckBoxOutlineBlank size={20}/>}</span>
+                <span className="px-1 py-2 hover:light-2 rounded-xl"><FaCaretDown size={14}/></span>
+              </div>
+              <div className="flex items-center">
+                <span className="p-3 hover:light-2 rounded-full"><IoMdRefresh size={20}/></span>
+                <span className="p-3 hover:light-2 rounded-full"><GoRead size={20}/></span>
+              </div>
             </td>
-            <td className="w-[20%] flex items-center">
-              <span className="p-3 hover:light-2 rounded-full"><IoMdRefresh size={20}/></span>
+            <td className="flex items-center gap-2">
+              <span>1-50 of 1,543</span>
+              <div className="flex">
+                <span className="p-3 hover:light-2 rounded-full">
+                  <MdOutlineKeyboardArrowLeft size={20}/>
+                </span>
+                <span className="p-3 hover:light-2 rounded-full">
+                  <MdOutlineKeyboardArrowRight size={20}/>
+                </span>
+              </div>
             </td>
-            <td className="w-[20%] flex items-center">
-              <span className="p-3 hover:light-2 rounded-full"><GoRead size={20}/></span>
-            </td>
+            
         </tr>
       </thead>
         
       <tbody>
-        <tr className="flex gap-2 justify-between border border-light-1 hover:shadow-md cursor-pointer">
+        <tr className="flex gap-2 justify-between border-b border-light-1 hover:shadow-md cursor-pointer">
             <td className="w-[20%] flex items-center">
               <span className="p-3 hover:light-2 rounded-full accent-light-2" onClick={holdChecking}>{checked?<MdOutlineCheckBox size={20}/>:<MdOutlineCheckBoxOutlineBlank size={20}/>}</span>
               <span>AliExpress</span>

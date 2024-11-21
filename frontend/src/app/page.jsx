@@ -1,6 +1,6 @@
-import Aside from "@/components/Aside";
-import ToolBar from "@/components/ToolBar";
-import MainTable from "@/components/MainTable";
+import Aside from "@/sections/Aside";
+import ToolBar from "@/sections/ToolBar";
+import MainTable from "@/sections/MainTable";
 import "./page.css";
 
 export default function Home() {
