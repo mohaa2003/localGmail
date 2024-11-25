@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react";
-import "./maintable.css";
+import { useContext, useState } from "react";
 import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
 import { MdOutlineCheckBox } from "react-icons/md";
 import { FaCaretDown } from "react-icons/fa";
@@ -9,10 +8,12 @@ import { IoMdRefresh } from "react-icons/io";
 import { GoRead } from "react-icons/go";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { openAsideContext } from "@/contexts/OpenAsideProvider";
 
 
 
 const MainTable = () => {
+const {openAside} = useContext(openAsideContext);
 
 const [readed,setReaded] = useState(false);
 const holdReadingMails = ()=>{
@@ -26,7 +27,7 @@ const holdChecking = ()=>{
 }
 
   return (
-    <table id="maintable" className="bg-[#fff] h-full flex flex-col relative overflow-auto rounded-3xl">
+    <table id="maintable" className={"bg-[#fff] h-full flex flex-col relative overflow-auto rounded-3xl "+(openAsideContext? "calc(100% - 300px)" : "w-full")}>
       <thead className="sticky top-0">
       <tr className="flex justify-between border border-white bg-white rounded-t-3xl items-center">
             <td className="flex gap-16">

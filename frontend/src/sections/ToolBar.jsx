@@ -1,12 +1,17 @@
+"use client"
+
+import { useContext } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { IoMail } from "react-icons/io5";
+import { openAsideContext } from "@/contexts/OpenAsideProvider"
 
 
 const ToolBar = () => {
-  return (
-    <section className="min-h-[100vh] w-[70px] light-1 flex justify-center py-4">
+  const {asideOpened,handleOpeningAside} = useContext(openAsideContext);
+    return (
+      <section className="min-h-[100vh] w-[70px] light-1 flex justify-center py-4">
         <div className="flex flex-col items-center gap-8">
-            <div className="hover:lighter-2 p-2 rounded-full">
+            <div className="hover:lighter-2 p-2 rounded-full" onClick={handleOpeningAside}>
                 <HiBars3 size={25}/>
             </div>
             <div>
@@ -16,7 +21,7 @@ const ToolBar = () => {
               </div>
             </div>
         </div>
-    </section>
+      </section>
   )
 }
 

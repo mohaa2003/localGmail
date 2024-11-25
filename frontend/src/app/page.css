@@ -1,5 +1,4 @@
 .rest{
-    width: calc(100vw - 70px);
     display: flex;
     align-items: start;
     padding: 0.5rem;

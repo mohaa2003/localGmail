@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import OpenAsideProvider from "@/contexts/OpenAsideProvider";
 import "./globals.css";
 
 const poppins = Poppins({ subsets: ["latin"],weight : ["300","400","500","700"]});
@@ -10,8 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={poppins.className + " txtNorm lighter-1"}>{children}</body>
-    </html>
+    <OpenAsideProvider>
+      <html lang="en">
+        <body className={poppins.className + " txtNorm lighter-1"}>{children}</body>
+      </html>
+    </OpenAsideProvider>
   );
 }

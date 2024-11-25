@@ -1,14 +1,19 @@
+"use client"
+
 import { HiPencil } from "react-icons/hi2";
 import { MdInbox } from "react-icons/md";
 import { VscSend } from "react-icons/vsc";
 import { RiSpam2Line } from "react-icons/ri";
 import { RiDraftLine } from "react-icons/ri";
+import { useContext } from "react";
+import { openAsideContext } from "@/contexts/OpenAsideProvider";
 
 
 
 const Aside = () => {
+    const {asideOpened} = useContext(openAsideContext);
   return (
-    <aside className="w-[300px] p-3">
+    <aside className={"w-[300px] p-3 transition-all duration-300 "+(asideOpened?"scale-100":"w-0 scale-0")}>
         <div className="flex flex-col gap-4">
             <div>
                 <button className="flex items-center gap-2 lighter-2 px-6 py-4 rounded-[15px] text-md txtTitle hover:shadow-md transition-all duration-300">
