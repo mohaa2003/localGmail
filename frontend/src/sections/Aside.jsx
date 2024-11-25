@@ -13,7 +13,7 @@ import { openAsideContext } from "@/contexts/OpenAsideProvider";
 const Aside = () => {
     const {asideOpened} = useContext(openAsideContext);
   return (
-    <aside className={"w-[300px] p-3 transition-all duration-300 "+(asideOpened?"scale-100":"w-0 scale-0")}>
+    <aside className={"p-3 transition-all duration-300 shrink-0 "+(asideOpened?"scale-x-100 w-[280px]":"w-0 scale-x-0")}>
         <div className="flex flex-col gap-4">
             <div>
                 <button className="flex items-center gap-2 lighter-2 px-6 py-4 rounded-[15px] text-md txtTitle hover:shadow-md transition-all duration-300">
@@ -37,7 +37,7 @@ const Aside = () => {
                 <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <VscSend size={20}/>
-                        <strong className="">Sent</strong>
+                        <strong >Sent</strong>
                     </div>
                     <div>
                         <span className="font-bold">
@@ -49,7 +49,7 @@ const Aside = () => {
                 <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <RiSpam2Line size={20}/>
-                        <strong className="">Draft</strong>
+                        <strong>Spam</strong>
                     </div>
                     <div>
                         <span className="font-bold">
@@ -61,7 +61,7 @@ const Aside = () => {
                 <div className=" flex justify-between items-center px-3 py-2 hover:lighter-2 rounded-full cursor-pointer">
                     <div className="flex items-center gap-2">
                         <RiDraftLine size={20}/>
-                        <strong className="">Spam</strong>
+                        <strong>Draft</strong>
                     </div>
                     <div>
                         <span className="font-bold">

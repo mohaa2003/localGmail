@@ -27,7 +27,7 @@ const holdChecking = ()=>{
 }
 
   return (
-    <table id="maintable" className={"bg-[#fff] h-full flex flex-col relative overflow-auto rounded-3xl "+(openAsideContext? "calc(100% - 300px)" : "w-full")}>
+    <table className={"bg-[#fff] h-full flex flex-col relative overflow-auto rounded-3xl min-w-[500px] "} style={openAside? {width:"calc(100% - 300px)"} : {width:"100%"}}>
       <thead className="sticky top-0">
       <tr className="flex justify-between border border-white bg-white rounded-t-3xl items-center">
             <td className="flex gap-16">

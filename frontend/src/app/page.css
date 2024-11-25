@@ -1,4 +1,5 @@
-.rest{
+#rest{
+    width: calc(100% - 70px);
     display: flex;
     align-items: start;
     padding: 0.5rem;

@@ -9,7 +9,7 @@ import { openAsideContext } from "@/contexts/OpenAsideProvider"
 const ToolBar = () => {
   const {asideOpened,handleOpeningAside} = useContext(openAsideContext);
     return (
-      <section className="min-h-[100vh] w-[70px] light-1 flex justify-center py-4">
+      <section className="min-h-[100vh] min-w-[70px] w-[70px] light-1 flex justify-center py-4">
         <div className="flex flex-col items-center gap-8">
             <div className="hover:lighter-2 p-2 rounded-full" onClick={handleOpeningAside}>
                 <HiBars3 size={25}/>
