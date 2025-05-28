@@ -22,6 +22,12 @@
     font-weight: 300;
     @apply text-sm
   }
+
+  .txtSmall {
+    color: #353f4d;
+    font-weight: 300;
+    @apply text-xs
+  }
   .txtTitle {
     color: #353f4d;
     font-weight: 500;
@@ -40,6 +46,9 @@
 
   .lighter-2{
     background-color : rgba(194,231,255,200);
+  }
+  .secondry{
+    background-color: rgb(29, 29, 204);
   }
 
   .strong{
